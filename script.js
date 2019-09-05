@@ -2,6 +2,16 @@
 window.onload = function() {
     // Lyssna efter händelser
     let team = document.getElementsByClassName('team-member');
+
+    for (i = 0; i < team.length; i++) { 
+        for (let j = 0; j < team[i].children.length; j++){
+            let memberElem = team[i].children[j];
+            team[i].addEventListener("mouseout",effectOff);
+            memberElem.addEventListener("mouseover",effectOn);
+        }
+    }
+    console.log(i);
+
     team[0].children[0].addEventListener("mouseover", effectOn);
     team[0].children[0].addEventListener("mouseout", effectOff);  
 
