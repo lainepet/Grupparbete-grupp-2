@@ -4,19 +4,16 @@ window.onload = function() {
     let team = document.getElementsByClassName('team-member');
 
     for (i = 0; i < team.length; i++) { 
+        team[i].children[0].addEventListener("click",editTitle);
+
         for (let j = 0; j < team[i].children.length; j++){
             let memberElem = team[i].children[j];
             team[i].addEventListener("mouseout",effectOff);
             memberElem.addEventListener("mouseover",effectOn);
         }
-    }
-    console.log(i);
-
-    team[0].children[0].addEventListener("mouseover", effectOn);
-    team[0].children[0].addEventListener("mouseout", effectOff);  
-
-    document.getElementById("donlee").addEventListener("click", editTitle);
-    document.getElementById("frankiesmith").addEventListener("click", editTitle);
+    } 
+    //document.getElementById("donlee").addEventListener("click", editTitle);
+    //document.getElementById("frankiesmith").addEventListener("click", editTitle);
     
 }
 var editTitle = function(e) {
@@ -24,8 +21,8 @@ var editTitle = function(e) {
     //document.getElementsByClassName("team-title").innerHTML = alert("triggered");
     var title = prompt("Byt tittel här");
     if(title != null){
-        document.getElementsByClassName("team-title")[1].innerHTML = title;
-        console.log(title);
+        e.target.parentElement.children[2].innerHTML = title;
+        console.log(e.target.parentElement.children[2]);
     }
 };
 
