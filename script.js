@@ -11,14 +11,10 @@ window.onload = function() {
             team[i].addEventListener("mouseout",effectOff);
             memberElem.addEventListener("mouseover",effectOn);
         }
-    } 
-    //document.getElementById("donlee").addEventListener("click", editTitle);
-    //document.getElementById("frankiesmith").addEventListener("click", editTitle);
-    
+    }
 }
 var editTitle = function(e) {
     // Ändra "team-title"
-    //document.getElementsByClassName("team-title").innerHTML = alert("triggered");
     var title = prompt("Byt tittel här");
     if(title != null){
         e.target.parentElement.children[2].innerHTML = title;
@@ -28,7 +24,6 @@ var editTitle = function(e) {
 
 function effectOn(id){
     // Rita en ram runt personen, kanske lite drop shadow?
-    //document.getElementsByClassName("team-title").innerHTML = prompt("triggered");
     id.target.parentElement.classList.add("hovering");
 }
 
