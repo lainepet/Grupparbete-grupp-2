@@ -24,6 +24,7 @@ body {
     float: left;
     position: relative;
     text-align: center;
+    padding: 13px;
     margin: 10px;
 }
 
@@ -38,13 +39,13 @@ body {
 .profile {
     height: 150px;
     width: 150px;
-    margin:5px;
+    padding: 5px;
 }
 
-.hovering {
+.hover-on {
     box-shadow: 7px 7px 5px #ccc;
     border: 2px black solid;
     border-radius: 10px;
+    padding: 11px;
 }
-
 
